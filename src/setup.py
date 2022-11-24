@@ -3,7 +3,12 @@ from setuptools import setup
 requires=[
     'pyramid==2.0',
     'pyramid_mako',
-    'waitress'
+    'pyramid_tm',
+    'sqlalchemy',
+    'graphene-sqlalchemy>=2.0',
+    'waitress',
+    'zope.sqlalchemy'
+
 ]
 
 dev_requires=[

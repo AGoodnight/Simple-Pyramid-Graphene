@@ -1,5 +1,6 @@
 pyramid==2.0
 pyramid_mako
+graphene-sqlalchemy>=2.0
 waitress
 
 [dev]
