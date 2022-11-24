@@ -1,0 +1,24 @@
+type WizardAnswer {
+  id: ID
+  session: ID
+  stepKey: String
+  schemaKey: String!
+}
+
+type WizardStep {
+  id: ID
+  complete: Boolean
+  schemaKey: String
+}
+
+type WizardSession {
+  id: ID
+  completedSteps: [String]!
+  currentStep: String!
+}
+
+type Query {
+  session(id: ID): WizardSession
+  step(id: ID): WizardStep
+  answer(id: ID): WizardAnswer
+}

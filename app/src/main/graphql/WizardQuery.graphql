@@ -1,0 +1,72 @@
+query GetSession($id: String!) {
+  session(id: $id) {
+    id
+    completedSteps
+    currentStep
+  }
+}
+
+query GetSessions(){
+  session{
+    id
+    completedSteps
+    currentStep
+  }
+}
+
+query GetStep($id:String!){
+  step:(id:$id){
+    id
+    complete
+    schemaKey
+  }
+}
+
+query GetSteps(){
+  step{
+    id
+    complete
+    schemaKey
+  }
+}
+
+query GetAnswer($id:String!){
+  answer(id:$id){
+    id
+    session
+    stepKey
+    answer
+  }
+}
+
+query GetAnswers(){
+  answer{
+    id
+    session
+    stepKey
+    answer
+  }
+}
+
+query GetSessionAnswers($session:string){
+  answer(session:$session){
+    id
+    session
+    schemaKey
+    answer
+  }
+}
+
+query GetWizard(id:String){
+  session(id:$id){
+    id
+    completedSteps
+    currentStep
+  }
+  answers(session:$id){
+    id,
+    session,
+    schemaKey,
+    answer
+  }
+}

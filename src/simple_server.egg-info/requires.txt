@@ -1,0 +1,8 @@
+pyramid==2.0
+pyramid_mako
+waitress
+
+[dev]
+pyramid_debugtoolbar
+webtest
+pytest
