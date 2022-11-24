@@ -1,3 +1,0 @@
-[paste.app_factory]
-main = simple_server:main
-

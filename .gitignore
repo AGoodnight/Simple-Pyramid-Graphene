@@ -1,5 +1,7 @@
-# Ignore Gradle project-specific cache directory
-.gradle
+# Ignore project-specific cache directory
+**/*.egg-info
 
-# Ignore Gradle build output directory
+# Ignore build output directory
 build
+env
+old
